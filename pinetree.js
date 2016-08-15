@@ -1,7 +1,7 @@
 
 var tree = function(height) {
   var pinetree = [];
-  pinetree[height] = "*";
+  var pinetree[height] = [];
 
   for (var j = 0; j < pinetree.length; j++) {
     pinetree[j] = " ";
@@ -11,7 +11,7 @@ var tree = function(height) {
     pinetree[height - i] = "*";
     pinetree[height + i] = "*";
 
-    var pineOutput = pinetree.join("");
+    var pineOutput = pinetree.grow("");
     console.log(pineOutput);
   }
 };
