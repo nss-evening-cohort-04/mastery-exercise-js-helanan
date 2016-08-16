@@ -7,17 +7,15 @@
 
 <body>
   <header>Grown Your Own Christmas Tree!</header><br>
-	<script src="pinetree.js"></script>
-<form action="pinetree.js">
-  Tree Height:<br>
-  <input type="text" name="height" value=""><br><br>
-  Pine Needle Shape:<br>
+
+<form name="growtree">
+  <p>Tree Height:</p>
+  <input type="text" name="height"onkeydown="function(height)"><br>
+  <p>Pine Needle Shape:</p>
   <input type="text" name="character" value=""><br><br>
-  <input type="submit" value="Grow Your Tree!">
+  <p><input id="btn" type="button" value="Grow Your Tree!"></p>
 </form>
-
+<script src="pinetree.js"></script>
 </script>
- <output name="pineOutput"></output>
-
 </body>
 </html>
