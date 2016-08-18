@@ -1,26 +1,40 @@
-var tree = function(height) {
-  var pinetree = [];
-  pinetree[height] = "*";
+function tree(height, character) {
+  var growtree = [];
+  growtree[height] = character;
 
-  for (var j = 0; j < pinetree.length; j++) {
-    pinetree[j] = " ";
+  for (var i = 0; i < growtree.length; i++) {
+   growtree[i] = "" + " ";
   }
 
-  for (var i = 0; i < height; i++) {
-    pinetree[height - i] = "*";
-    pinetree[height + i] = "*";
+  for (var j = 0; j < height; j++) {
+    growtree[height - j] = " " + character + "";
 
-    var pineOutput = pinetree.join("");
-    console.log(pineOutput);
+    var treeOutput = growtree.join("");
+    console.log(treeOutput);
   }
 };
-tree(6);
 
 var nameInput = document.getElementById("height");
-window.addEventListener("keypress", checkKeyPressed, false);
- 
+var btn = document.getElementById("btn");
+btn.addEventListener("click", validation);
+
+function validation(){
+var heightbtn = document.getElementById("height").value;
+var shapebtn = document.getElementById("shape").value;
+if (heightbtn === "" && shapebtn === "") {
+  alert ("Need A Value");
+  } 
+  else {
+    tree (heightbtn, shapebtn)
+  }
+}
+
+
+
 function checkKeyPressed(e) {
     if (e.charCode == "13") {
     console.log(nameInput);
     }
+
+   
 }
