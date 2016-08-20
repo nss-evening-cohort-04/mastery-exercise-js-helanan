@@ -3,13 +3,13 @@ function tree(height, character) {
   growtree[height] = character;
 
   for (var i = 0; i < growtree.length; i++) {
-   growtree[i] = "" + " ";
+   growtree[i];
   }
 
   for (var j = 0; j < height; j++) {
-    growtree[height - j] = " " + character + "";
+    growtree[height - j] = character;
 
-    var treeOutput = growtree.join("");
+    var treeOutput = growtree.join(" ");
     console.log(treeOutput);
   }
 };
@@ -19,22 +19,15 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", validation);
 
 function validation(){
-var heightbtn = document.getElementById("height").value;
-var shapebtn = document.getElementById("shape").value;
-if (heightbtn === "" && shapebtn === "") {
+var heightinput = document.getElementById("height").value;
+var shapeinput = document.getElementById("shape").value;
+if (heightinput === "" && shapeinput === "") {
   alert ("Need A Value");
   } 
   else {
-    tree (heightbtn, shapebtn)
+    tree (heightinput, shapeinput)
   }
 }
 
 
-
-function checkKeyPressed(e) {
-    if (e.charCode == "13") {
-    console.log(nameInput);
-    }
-
-   
-}
+  
