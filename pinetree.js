@@ -3,11 +3,11 @@ function tree(height, character) {
   growtree[height] = character;
 
   for (var i = 0; i <= height; i++) {
-  growtree[i] = "" + " ";  
+  growtree[i] = "" + " ";
   }
 
  growtree[height + 1] = character;
- var treeStart = growtree.join(""); 
+ var treeStart = growtree.join("");
  console.log(treeStart);
 
   for (var j = 0; j < height; j++) {
@@ -31,3 +31,14 @@ if (heightinput === "" || shapeinput === "") {
   tree (heightinput, shapeinput)
   }
 };
+
+(function(console) {
+  console.save = function(data, filename){
+    if(!data) {
+      console.error('Console.save: No data')
+      return;
+    }
+
+    if(!filename) filename = 'console.json'
+  }
+})
